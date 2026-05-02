@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
     var currentYearSpan = document.getElementById('currentYear');
     if (currentYearSpan) {
         currentYearSpan.textContent = new Date().getFullYear();
@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
         var originalHTML = logoText.textContent;
         var chars = originalHTML.split('');
         logoText.innerHTML = '';
-        chars.forEach(function (c) {
+        chars.forEach(function(c) {
             var span = document.createElement('span');
             span.className = 'char';
             span.textContent = c;
@@ -26,8 +26,8 @@ document.addEventListener('DOMContentLoaded', function () {
         threshold: 0.12
     };
 
-    var observer = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
+    var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
                 observer.unobserve(entry.target);
@@ -35,37 +35,37 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }, observerOptions);
 
-    animatedElements.forEach(function (el) {
+    animatedElements.forEach(function(el) {
         if (el.dataset.animate !== 'shimmer') {
             observer.observe(el);
         }
     });
 
-    var shimmerObserver = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
+    var shimmerObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
             if (entry.isIntersecting) {
                 entry.target.classList.add('shimmer-active');
-                setTimeout(function () {
+                setTimeout(function() {
                     entry.target.classList.remove('shimmer-active');
                 }, 1000);
             }
         });
     }, { threshold: 0.5 });
 
-    shimmerElements.forEach(function (el) {
+    shimmerElements.forEach(function(el) {
         shimmerObserver.observe(el);
     });
 
     var filterButtons = document.querySelectorAll('.filter-btn');
     var productCards = document.querySelectorAll('.product-card');
 
-    filterButtons.forEach(function (btn) {
-        btn.addEventListener('click', function () {
-            filterButtons.forEach(function (b) { b.classList.remove('filter-btn--active'); });
+    filterButtons.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            filterButtons.forEach(function(b) { b.classList.remove('filter-btn--active'); });
             btn.classList.add('filter-btn--active');
             var filterValue = btn.dataset.filter;
 
-            productCards.forEach(function (card) {
+            productCards.forEach(function(card) {
                 if (filterValue === 'all' || card.dataset.category === filterValue) {
                     card.style.display = 'flex';
                 } else {
@@ -79,22 +79,22 @@ document.addEventListener('DOMContentLoaded', function () {
     var navList = document.querySelector('.nav__list');
 
     if (burgerBtn && navList) {
-        burgerBtn.addEventListener('click', function () {
+        burgerBtn.addEventListener('click', function() {
             var expanded = burgerBtn.getAttribute('aria-expanded') === 'true';
             burgerBtn.setAttribute('aria-expanded', !expanded);
             navList.classList.toggle('active');
         });
 
         var navLinks = navList.querySelectorAll('.nav__link');
-        navLinks.forEach(function (link) {
-            link.addEventListener('click', function () {
+        navLinks.forEach(function(link) {
+            link.addEventListener('click', function() {
                 navList.classList.remove('active');
                 burgerBtn.setAttribute('aria-expanded', 'false');
             });
         });
     }
 
-    document.addEventListener('click', function (e) {
+    document.addEventListener('click', function(e) {
         if (navList && navList.classList.contains('active') && !e.target.closest('.nav') && !e.target.closest('.nav__burger')) {
             navList.classList.remove('active');
             if (burgerBtn) burgerBtn.setAttribute('aria-expanded', 'false');
@@ -107,27 +107,27 @@ document.addEventListener('DOMContentLoaded', function () {
     var closeProductModal = document.getElementById('closeProductModal');
 
     var priceButtons = document.querySelectorAll('.btn--price');
-    priceButtons.forEach(function (btn) {
-        btn.addEventListener('click', function (e) {
+    priceButtons.forEach(function(btn) {
+        btn.addEventListener('click', function(e) {
             e.stopPropagation();
             if (priceModal) priceModal.classList.add('active');
         });
     });
 
     if (closePriceModal && priceModal) {
-        closePriceModal.addEventListener('click', function () {
+        closePriceModal.addEventListener('click', function() {
             priceModal.classList.remove('active');
         });
     }
 
     if (closeProductModal && productModal) {
-        closeProductModal.addEventListener('click', function () {
+        closeProductModal.addEventListener('click', function() {
             productModal.classList.remove('active');
         });
     }
 
     if (priceModal) {
-        priceModal.addEventListener('click', function (e) {
+        priceModal.addEventListener('click', function(e) {
             if (e.target === priceModal) {
                 priceModal.classList.remove('active');
             }
@@ -135,36 +135,29 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     if (productModal) {
-        productModal.addEventListener('click', function (e) {
+        productModal.addEventListener('click', function(e) {
             if (e.target === productModal) {
                 productModal.classList.remove('active');
             }
         });
     }
 
-    productCards.forEach(function (card) {
-        card.addEventListener('click', function (e) {
+    productCards.forEach(function(card) {
+        card.addEventListener('click', function(e) {
             if (e.target.closest('.btn--price')) return;
             if (productModal) {
                 var imgSrc = card.dataset.image;
                 var name = card.dataset.name;
-                var taste = card.dataset.taste;
-                var weight = card.dataset.weight;
-                var shelf = card.dataset.shelf;
 
                 document.getElementById('modalProductImg').src = imgSrc;
                 document.getElementById('modalProductImg').alt = name;
-                document.getElementById('modalProductName').textContent = name;
-                document.getElementById('modalProductTaste').textContent = 'Вкус: ' + taste;
-                document.getElementById('modalProductWeight').textContent = 'Вес: ' + weight;
-                document.getElementById('modalProductShelf').textContent = 'Срок: ' + shelf;
 
                 productModal.classList.add('active');
             }
         });
     });
 
-    document.addEventListener('keydown', function (e) {
+    document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape') {
             if (priceModal && priceModal.classList.contains('active')) priceModal.classList.remove('active');
             if (productModal && productModal.classList.contains('active')) productModal.classList.remove('active');
@@ -176,12 +169,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
         function animateLogoChars() {
             logoText.classList.add('animate-chars');
-            charSpans.forEach(function (span, index) {
+            charSpans.forEach(function(span, index) {
                 span.style.animationDelay = (index * 0.04) + 's';
             });
-            setTimeout(function () {
+            setTimeout(function() {
                 logoText.classList.remove('animate-chars');
-                charSpans.forEach(function (span) {
+                charSpans.forEach(function(span) {
                     span.style.animationDelay = '';
                 });
             }, charSpans.length * 40 + 600);
