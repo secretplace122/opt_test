@@ -24,8 +24,8 @@
 <body>
     <header class="header">
         <div class="container header__inner">
-            <a href="#" class="logo">
-                <span class="logo__text">BEST SWEETS</span>
+            <a href="#" class="logo" id="animatedLogo">
+                <span class="logo__text" id="logoText">BEST SWEETS</span>
                 <span class="logo__tagline">оптовый партнёр</span>
             </a>
             <nav class="nav">
@@ -63,7 +63,6 @@
                     <div class="hero__stats">
                         <div class="stat-item">
                             <span class="stat-item__number">Москва и Московская область</span>
-                            <span class="stat-item__label">зона доставки</span>
                         </div>
                     </div>
                 </div>
@@ -79,7 +78,7 @@
         <section class="about" id="about">
             <div class="container">
                 <div class="about__header">
-                    <h2 class="section-title" data-animate="fade-up">Почему выбирают оптовые поставки с BEST SWEETS</h2>
+                    <h2 class="section-title" data-animate="fade-up">Оптовые поставки с BEST SWEETS</h2>
                     <p class="about__intro" data-animate="fade-up">Мир кондитерского бизнеса стремительно растёт. Каждый
                         день сотни кофеен, магазинов и пекарен ищут стабильного партнёра. Мы не просто отгружаем товар —
                         мы выстраиваем логистическую цепочку, экономя ваше время и ресурсы. Качество кексов, бисквитов,
@@ -94,9 +93,12 @@
                                 <path d="M20 10V20L27 25" stroke="#1A3A5C" stroke-width="3" stroke-linecap="round" />
                             </svg>
                         </div>
-                        <h3 class="feature-card__title">Отгрузка день в день</h3>
-                        <p class="feature-card__desc">Понимаем цену времени в бизнесе. Заказ, оформленный до 15:00,
-                            отправляется на следующий день. Никаких задержек и проволочек — ваш склад всегда полон.</p>
+                        <div class="feature-card__content">
+                            <h3 class="feature-card__title">Отгрузка день в день</h3>
+                            <p class="feature-card__desc">Понимаем цену времени в бизнесе. Заказ, оформленный до 15:00,
+                                отправляется на следующий день. Никаких задержек и проволочек — ваш склад всегда полон.
+                            </p>
+                        </div>
                     </div>
                     <div class="feature-card" data-animate="fade-up">
                         <div class="feature-card__icon">
@@ -106,9 +108,12 @@
                                     stroke="#1A3A5C" stroke-width="3" />
                             </svg>
                         </div>
-                        <h3 class="feature-card__title">Удобная фасовка</h3>
-                        <p class="feature-card__desc">Короба от 1.5 до 3 килограмм — проверенный формат для точек
-                            общепита. Не нужно перевешивать и переупаковывать. Открыл короб — выложил на витрину.</p>
+                        <div class="feature-card__content">
+                            <h3 class="feature-card__title">Удобная фасовка</h3>
+                            <p class="feature-card__desc">Короба от 1.5 до 3 килограмм — проверенный формат для точек
+                                общепита. Не нужно перевешивать и переупаковывать. Открыл короб — выложил на витрину.
+                            </p>
+                        </div>
                     </div>
                     <div class="feature-card" data-animate="fade-up">
                         <div class="feature-card__icon">
@@ -117,9 +122,11 @@
                                     stroke-width="3" />
                             </svg>
                         </div>
-                        <h3 class="feature-card__title">Без искусственных добавок</h3>
-                        <p class="feature-card__desc">Только натуральные ингредиенты. Никаких усилителей вкуса,
-                            красителей и консервантов. Ваши покупатели чувствуют разницу и возвращаются снова.</p>
+                        <div class="feature-card__content">
+                            <h3 class="feature-card__title">Без искусственных добавок</h3>
+                            <p class="feature-card__desc">Только натуральные ингредиенты. Никаких усилителей вкуса,
+                                красителей и консервантов. Ваши покупатели чувствуют разницу и возвращаются снова.</p>
+                        </div>
                     </div>
                     <div class="feature-card" data-animate="fade-up">
                         <div class="feature-card__icon">
@@ -128,9 +135,11 @@
                                 <path d="M12 20H28M20 12V28" stroke="#1A3A5C" stroke-width="3" stroke-linecap="round" />
                             </svg>
                         </div>
-                        <h3 class="feature-card__title">Гибкое сотрудничество</h3>
-                        <p class="feature-card__desc">Индивидуальные условия для каждого партнёра. Скидки на объём,
-                            отсрочка платежа для постоянных клиентов, персональный менеджер по сопровождению.</p>
+                        <div class="feature-card__content">
+                            <h3 class="feature-card__title">Гибкое сотрудничество</h3>
+                            <p class="feature-card__desc">Индивидуальные условия для каждого партнёра. Скидки на объём,
+                                отсрочка платежа для постоянных клиентов, персональный менеджер по сопровождению.</p>
+                        </div>
                     </div>
                 </div>
                 <div class="about__extra-text" data-animate="fade-up">
@@ -157,15 +166,6 @@
                         <a href="matrix.xlsx" download class="btn btn--primary conductor__btn">Скачать матрицу
                             (Excel)</a>
                     </div>
-                    <div class="conductor__visual">
-                        <div class="conductor__file-icon">
-                            <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
-                                <rect x="10" y="4" width="40" height="52" rx="4" stroke="#E67E22" stroke-width="3" />
-                                <path d="M22 24H38M22 34H38M22 44H30" stroke="#E67E22" stroke-width="3"
-                                    stroke-linecap="round" />
-                            </svg>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
@@ -184,8 +184,8 @@
                     <button class="filter-btn" data-filter="pastries">Пирожные оптом</button>
                 </div>
                 <div class="catalog__grid" id="catalogGrid">
-                    <!-- Категория: Кексы -->
-                    <div class="product-card" data-category="cakes">
+                    <div class="product-card" data-category="cakes" data-name="Кекс Адель" data-taste="Варёная сгущёнка"
+                        data-weight="3 кг" data-shelf="30 суток" data-image="img/card/keks_adel_1.webp">
                         <div class="product-card__image">
                             <img src="img/card/keks_adel_1.webp" alt="Кекс Адель с варёной сгущёнкой"
                                 class="product-card__img" loading="lazy">
@@ -195,10 +195,11 @@
                             <div class="product-card__tags"><span class="product-card__tag">Вкус: Варёная
                                     сгущёнка</span><span class="product-card__tag">Вес: 3 кг</span><span
                                     class="product-card__tag">Срок: 30 суток</span></div>
-                            <button class="btn btn--outline btn--sm">Запросить цену</button>
+                            <button class="btn btn--outline btn--sm btn--price">Запросить цену</button>
                         </div>
                     </div>
-                    <div class="product-card" data-category="cakes">
+                    <div class="product-card" data-category="cakes" data-name="Кекс Адель" data-taste="Сливочный крем"
+                        data-weight="3 кг" data-shelf="30 суток" data-image="img/card/keks_adel_1.webp">
                         <div class="product-card__image">
                             <img src="img/card/keks_adel_1.webp" alt="Кекс Адель со сливочным кремом"
                                 class="product-card__img" loading="lazy">
@@ -208,10 +209,11 @@
                             <div class="product-card__tags"><span class="product-card__tag">Вкус: Сливочный
                                     крем</span><span class="product-card__tag">Вес: 3 кг</span><span
                                     class="product-card__tag">Срок: 30 суток</span></div>
-                            <button class="btn btn--outline btn--sm">Запросить цену</button>
+                            <button class="btn btn--outline btn--sm btn--price">Запросить цену</button>
                         </div>
                     </div>
-                    <div class="product-card" data-category="cakes">
+                    <div class="product-card" data-category="cakes" data-name="Кекс Дельфин" data-taste="Абрикос"
+                        data-weight="2.5 кг" data-shelf="30 суток" data-image="img/card/keks_delfin_1.webp">
                         <div class="product-card__image">
                             <img src="img/card/keks_delfin_1.webp" alt="Кекс Дельфин с абрикосом"
                                 class="product-card__img" loading="lazy">
@@ -221,10 +223,12 @@
                             <div class="product-card__tags"><span class="product-card__tag">Вкус: Абрикос</span><span
                                     class="product-card__tag">Вес: 2.5 кг</span><span class="product-card__tag">Срок: 30
                                     суток</span></div>
-                            <button class="btn btn--outline btn--sm">Запросить цену</button>
+                            <button class="btn btn--outline btn--sm btn--price">Запросить цену</button>
                         </div>
                     </div>
-                    <div class="product-card" data-category="cakes">
+                    <div class="product-card" data-category="cakes" data-name="Кекс Дельфин"
+                        data-taste="Творог с изюмом" data-weight="2.5 кг" data-shelf="30 суток"
+                        data-image="img/card/keks_delfin_1.webp">
                         <div class="product-card__image">
                             <img src="img/card/keks_delfin_1.webp" alt="Кекс Дельфин с творогом и изюмом"
                                 class="product-card__img" loading="lazy">
@@ -234,10 +238,11 @@
                             <div class="product-card__tags"><span class="product-card__tag">Вкус: Творог с
                                     изюмом</span><span class="product-card__tag">Вес: 2.5 кг</span><span
                                     class="product-card__tag">Срок: 30 суток</span></div>
-                            <button class="btn btn--outline btn--sm">Запросить цену</button>
+                            <button class="btn btn--outline btn--sm btn--price">Запросить цену</button>
                         </div>
                     </div>
-                    <div class="product-card" data-category="cakes">
+                    <div class="product-card" data-category="cakes" data-name="Кекс Корзина" data-taste="Абрикос"
+                        data-weight="2.5 кг" data-shelf="30 суток" data-image="img/card/keks_korzina_1.webp">
                         <div class="product-card__image">
                             <img src="img/card/keks_korzina_1.webp" alt="Кекс Корзина с абрикосом"
                                 class="product-card__img" loading="lazy">
@@ -247,10 +252,12 @@
                             <div class="product-card__tags"><span class="product-card__tag">Вкус: Абрикос</span><span
                                     class="product-card__tag">Вес: 2.5 кг</span><span class="product-card__tag">Срок: 30
                                     суток</span></div>
-                            <button class="btn btn--outline btn--sm">Запросить цену</button>
+                            <button class="btn btn--outline btn--sm btn--price">Запросить цену</button>
                         </div>
                     </div>
-                    <div class="product-card" data-category="cakes">
+                    <div class="product-card" data-category="cakes" data-name="Кекс Корзина"
+                        data-taste="Ваниль и шоколад" data-weight="2.5 кг" data-shelf="30 суток"
+                        data-image="img/card/keks_korzina_1.webp">
                         <div class="product-card__image">
                             <img src="img/card/keks_korzina_1.webp" alt="Кекс Корзина с ванилью и шоколадом"
                                 class="product-card__img" loading="lazy">
@@ -260,10 +267,11 @@
                             <div class="product-card__tags"><span class="product-card__tag">Вкус: Ваниль и
                                     шоколад</span><span class="product-card__tag">Вес: 2.5 кг</span><span
                                     class="product-card__tag">Срок: 30 суток</span></div>
-                            <button class="btn btn--outline btn--sm">Запросить цену</button>
+                            <button class="btn btn--outline btn--sm btn--price">Запросить цену</button>
                         </div>
                     </div>
-                    <div class="product-card" data-category="cakes">
+                    <div class="product-card" data-category="cakes" data-name="Кекс Корзина" data-taste="Груша"
+                        data-weight="2.5 кг" data-shelf="30 суток" data-image="img/card/keks_korzina_1.webp">
                         <div class="product-card__image">
                             <img src="img/card/keks_korzina_1.webp" alt="Кекс Корзина с грушей"
                                 class="product-card__img" loading="lazy">
@@ -273,10 +281,11 @@
                             <div class="product-card__tags"><span class="product-card__tag">Вкус: Груша</span><span
                                     class="product-card__tag">Вес: 2.5 кг</span><span class="product-card__tag">Срок: 30
                                     суток</span></div>
-                            <button class="btn btn--outline btn--sm">Запросить цену</button>
+                            <button class="btn btn--outline btn--sm btn--price">Запросить цену</button>
                         </div>
                     </div>
-                    <div class="product-card" data-category="cakes">
+                    <div class="product-card" data-category="cakes" data-name="Кекс Корзина" data-taste="Сливки"
+                        data-weight="2 кг" data-shelf="25 суток" data-image="img/card/keks_korzina_2.webp">
                         <div class="product-card__image">
                             <img src="img/card/keks_korzina_2.webp" alt="Кекс Корзина со сливками"
                                 class="product-card__img" loading="lazy">
@@ -286,10 +295,11 @@
                             <div class="product-card__tags"><span class="product-card__tag">Вкус: Сливки</span><span
                                     class="product-card__tag">Вес: 2 кг</span><span class="product-card__tag">Срок: 25
                                     суток</span></div>
-                            <button class="btn btn--outline btn--sm">Запросить цену</button>
+                            <button class="btn btn--outline btn--sm btn--price">Запросить цену</button>
                         </div>
                     </div>
-                    <div class="product-card" data-category="cakes">
+                    <div class="product-card" data-category="cakes" data-name="Кекс Кофе" data-taste="Банан"
+                        data-weight="2.5 кг" data-shelf="30 дней" data-image="img/card/keks_kofe_1.webp">
                         <div class="product-card__image">
                             <img src="img/card/keks_kofe_1.webp" alt="Кекс Кофе с бананом" class="product-card__img"
                                 loading="lazy">
@@ -299,10 +309,11 @@
                             <div class="product-card__tags"><span class="product-card__tag">Вкус: Банан</span><span
                                     class="product-card__tag">Вес: 2.5 кг</span><span class="product-card__tag">Срок: 30
                                     дней</span></div>
-                            <button class="btn btn--outline btn--sm">Запросить цену</button>
+                            <button class="btn btn--outline btn--sm btn--price">Запросить цену</button>
                         </div>
                     </div>
-                    <div class="product-card" data-category="cakes">
+                    <div class="product-card" data-category="cakes" data-name="Кекс Кофе" data-taste="Шоколад"
+                        data-weight="2.5 кг" data-shelf="30 дней" data-image="img/card/keks_kofe_1.webp">
                         <div class="product-card__image">
                             <img src="img/card/keks_kofe_1.webp" alt="Кекс Кофе с шоколадом" class="product-card__img"
                                 loading="lazy">
@@ -312,10 +323,11 @@
                             <div class="product-card__tags"><span class="product-card__tag">Вкус: Шоколад</span><span
                                     class="product-card__tag">Вес: 2.5 кг</span><span class="product-card__tag">Срок: 30
                                     дней</span></div>
-                            <button class="btn btn--outline btn--sm">Запросить цену</button>
+                            <button class="btn btn--outline btn--sm btn--price">Запросить цену</button>
                         </div>
                     </div>
-                    <div class="product-card" data-category="cakes">
+                    <div class="product-card" data-category="cakes" data-name="Кекс Наф-Наф" data-taste="Ваниль"
+                        data-weight="2 кг" data-shelf="Нет" data-image="img/card/keks_naf-naf_1.webp">
                         <div class="product-card__image">
                             <img src="img/card/keks_naf-naf_1.webp" alt="Кекс Наф-Наф с ванилью"
                                 class="product-card__img" loading="lazy">
@@ -325,10 +337,12 @@
                             <div class="product-card__tags"><span class="product-card__tag">Вкус: Ваниль</span><span
                                     class="product-card__tag">Вес: 2 кг</span><span class="product-card__tag">Срок:
                                     Нет</span></div>
-                            <button class="btn btn--outline btn--sm">Запросить цену</button>
+                            <button class="btn btn--outline btn--sm btn--price">Запросить цену</button>
                         </div>
                     </div>
-                    <div class="product-card" data-category="cakes">
+                    <div class="product-card" data-category="cakes" data-name="Кекс Орешки"
+                        data-taste="Вишнёвая начинка" data-weight="2 кг" data-shelf="Нет"
+                        data-image="img/card/keks_oreshki_1.webp">
                         <div class="product-card__image">
                             <img src="img/card/keks_oreshki_1.webp" alt="Кекс Орешки с вишнёвой начинкой"
                                 class="product-card__img" loading="lazy">
@@ -338,10 +352,11 @@
                             <div class="product-card__tags"><span class="product-card__tag">Вкус: Вишнёвая
                                     начинка</span><span class="product-card__tag">Вес: 2 кг</span><span
                                     class="product-card__tag">Срок: Нет</span></div>
-                            <button class="btn btn--outline btn--sm">Запросить цену</button>
+                            <button class="btn btn--outline btn--sm btn--price">Запросить цену</button>
                         </div>
                     </div>
-                    <div class="product-card" data-category="cakes">
+                    <div class="product-card" data-category="cakes" data-name="Кекс Панда" data-taste="Крем сливочный"
+                        data-weight="2 кг" data-shelf="30 суток" data-image="img/card/keks_panda_1.webp">
                         <div class="product-card__image">
                             <img src="img/card/keks_panda_1.webp" alt="Кекс Панда с кремом сливочным"
                                 class="product-card__img" loading="lazy">
@@ -351,10 +366,11 @@
                             <div class="product-card__tags"><span class="product-card__tag">Вкус: Крем
                                     сливочный</span><span class="product-card__tag">Вес: 2 кг</span><span
                                     class="product-card__tag">Срок: 30 суток</span></div>
-                            <button class="btn btn--outline btn--sm">Запросить цену</button>
+                            <button class="btn btn--outline btn--sm btn--price">Запросить цену</button>
                         </div>
                     </div>
-                    <div class="product-card" data-category="cakes">
+                    <div class="product-card" data-category="cakes" data-name="Кекс Пружинки" data-taste="Кокос"
+                        data-weight="2 кг" data-shelf="30 суток" data-image="img/card/keks_pryzhinki_1.webp">
                         <div class="product-card__image">
                             <img src="img/card/keks_pryzhinki_1.webp" alt="Кекс Пружинки с кокосом"
                                 class="product-card__img" loading="lazy">
@@ -364,10 +380,11 @@
                             <div class="product-card__tags"><span class="product-card__tag">Вкус: Кокос</span><span
                                     class="product-card__tag">Вес: 2 кг</span><span class="product-card__tag">Срок: 30
                                     суток</span></div>
-                            <button class="btn btn--outline btn--sm">Запросить цену</button>
+                            <button class="btn btn--outline btn--sm btn--price">Запросить цену</button>
                         </div>
                     </div>
-                    <div class="product-card" data-category="cakes">
+                    <div class="product-card" data-category="cakes" data-name="Кекс Пружинки" data-taste="Фисташка"
+                        data-weight="2 кг" data-shelf="30 суток" data-image="img/card/keks_pryzhinki_1.webp">
                         <div class="product-card__image">
                             <img src="img/card/keks_pryzhinki_1.webp" alt="Кекс Пружинки с фисташкой"
                                 class="product-card__img" loading="lazy">
@@ -377,10 +394,11 @@
                             <div class="product-card__tags"><span class="product-card__tag">Вкус: Фисташка</span><span
                                     class="product-card__tag">Вес: 2 кг</span><span class="product-card__tag">Срок: 30
                                     суток</span></div>
-                            <button class="btn btn--outline btn--sm">Запросить цену</button>
+                            <button class="btn btn--outline btn--sm btn--price">Запросить цену</button>
                         </div>
                     </div>
-                    <div class="product-card" data-category="cakes">
+                    <div class="product-card" data-category="cakes" data-name="Кекс Снежок" data-taste="Кокос"
+                        data-weight="3 кг" data-shelf="30 суток" data-image="img/card/keks_snezhok_1.webp">
                         <div class="product-card__image">
                             <img src="img/card/keks_snezhok_1.webp" alt="Кекс Снежок с кокосом"
                                 class="product-card__img" loading="lazy">
@@ -390,10 +408,11 @@
                             <div class="product-card__tags"><span class="product-card__tag">Вкус: Кокос</span><span
                                     class="product-card__tag">Вес: 3 кг</span><span class="product-card__tag">Срок: 30
                                     суток</span></div>
-                            <button class="btn btn--outline btn--sm">Запросить цену</button>
+                            <button class="btn btn--outline btn--sm btn--price">Запросить цену</button>
                         </div>
                     </div>
-                    <div class="product-card" data-category="cakes">
+                    <div class="product-card" data-category="cakes" data-name="Кекс Снежок" data-taste="Лимон"
+                        data-weight="3 кг" data-shelf="30 суток" data-image="img/card/keks_snezhok_1.webp">
                         <div class="product-card__image">
                             <img src="img/card/keks_snezhok_1.webp" alt="Кекс Снежок с лимоном"
                                 class="product-card__img" loading="lazy">
@@ -403,10 +422,12 @@
                             <div class="product-card__tags"><span class="product-card__tag">Вкус: Лимон</span><span
                                     class="product-card__tag">Вес: 3 кг</span><span class="product-card__tag">Срок: 30
                                     суток</span></div>
-                            <button class="btn btn--outline btn--sm">Запросить цену</button>
+                            <button class="btn btn--outline btn--sm btn--price">Запросить цену</button>
                         </div>
                     </div>
-                    <div class="product-card" data-category="cakes">
+                    <div class="product-card" data-category="cakes" data-name="Кекс Спиральки"
+                        data-taste="Творог с изюмом" data-weight="2 кг" data-shelf="25 суток"
+                        data-image="img/card/keks_spiralki_1.webp">
                         <div class="product-card__image">
                             <img src="img/card/keks_spiralki_1.webp" alt="Кекс Спиральки с творогом и изюмом"
                                 class="product-card__img" loading="lazy">
@@ -416,10 +437,11 @@
                             <div class="product-card__tags"><span class="product-card__tag">Вкус: Творог с
                                     изюмом</span><span class="product-card__tag">Вес: 2 кг</span><span
                                     class="product-card__tag">Срок: 25 суток</span></div>
-                            <button class="btn btn--outline btn--sm">Запросить цену</button>
+                            <button class="btn btn--outline btn--sm btn--price">Запросить цену</button>
                         </div>
                     </div>
-                    <div class="product-card" data-category="cakes">
+                    <div class="product-card" data-category="cakes" data-name="Кекс Тюльпан" data-taste="Сливки"
+                        data-weight="1.7 кг" data-shelf="20 суток" data-image="img/card/keks_tylpan_1.webp">
                         <div class="product-card__image">
                             <img src="img/card/keks_tylpan_1.webp" alt="Кекс Тюльпан со сливками"
                                 class="product-card__img" loading="lazy">
@@ -429,10 +451,11 @@
                             <div class="product-card__tags"><span class="product-card__tag">Вкус: Сливки</span><span
                                     class="product-card__tag">Вес: 1.7 кг</span><span class="product-card__tag">Срок: 20
                                     суток</span></div>
-                            <button class="btn btn--outline btn--sm">Запросить цену</button>
+                            <button class="btn btn--outline btn--sm btn--price">Запросить цену</button>
                         </div>
                     </div>
-                    <div class="product-card" data-category="cakes">
+                    <div class="product-card" data-category="cakes" data-name="Кекс Улей" data-taste="Сливочный крем"
+                        data-weight="2 кг" data-shelf="30 суток" data-image="img/card/keks_ulei_1.webp">
                         <div class="product-card__image">
                             <img src="img/card/keks_ulei_1.webp" alt="Кекс Улей со сливочным кремом"
                                 class="product-card__img" loading="lazy">
@@ -442,10 +465,11 @@
                             <div class="product-card__tags"><span class="product-card__tag">Вкус: Сливочный
                                     крем</span><span class="product-card__tag">Вес: 2 кг</span><span
                                     class="product-card__tag">Срок: 30 суток</span></div>
-                            <button class="btn btn--outline btn--sm">Запросить цену</button>
+                            <button class="btn btn--outline btn--sm btn--price">Запросить цену</button>
                         </div>
                     </div>
-                    <div class="product-card" data-category="cakes">
+                    <div class="product-card" data-category="cakes" data-name="Кекс Устрица" data-taste="Дыня"
+                        data-weight="2.5 кг" data-shelf="30 суток" data-image="img/card/keks_ustrica_1.webp">
                         <div class="product-card__image">
                             <img src="img/card/keks_ustrica_1.webp" alt="Кекс Устрица с дыней" class="product-card__img"
                                 loading="lazy">
@@ -455,10 +479,11 @@
                             <div class="product-card__tags"><span class="product-card__tag">Вкус: Дыня</span><span
                                     class="product-card__tag">Вес: 2.5 кг</span><span class="product-card__tag">Срок: 30
                                     суток</span></div>
-                            <button class="btn btn--outline btn--sm">Запросить цену</button>
+                            <button class="btn btn--outline btn--sm btn--price">Запросить цену</button>
                         </div>
                     </div>
-                    <div class="product-card" data-category="cakes">
+                    <div class="product-card" data-category="cakes" data-name="Кекс Устрица" data-taste="Творог"
+                        data-weight="2 кг" data-shelf="25 суток" data-image="img/card/keks_ustrica_1.webp">
                         <div class="product-card__image">
                             <img src="img/card/keks_ustrica_1.webp" alt="Кекс Устрица с творогом"
                                 class="product-card__img" loading="lazy">
@@ -468,10 +493,11 @@
                             <div class="product-card__tags"><span class="product-card__tag">Вкус: Творог</span><span
                                     class="product-card__tag">Вес: 2 кг</span><span class="product-card__tag">Срок: 25
                                     суток</span></div>
-                            <button class="btn btn--outline btn--sm">Запросить цену</button>
+                            <button class="btn btn--outline btn--sm btn--price">Запросить цену</button>
                         </div>
                     </div>
-                    <div class="product-card" data-category="cakes">
+                    <div class="product-card" data-category="cakes" data-name="Кекс Шляпки" data-taste="Изюм"
+                        data-weight="2 кг" data-shelf="30 суток" data-image="img/card/keks_shlyapki_1.webp">
                         <div class="product-card__image">
                             <img src="img/card/keks_shlyapki_1.webp" alt="Кекс Шляпки с изюмом"
                                 class="product-card__img" loading="lazy">
@@ -481,10 +507,11 @@
                             <div class="product-card__tags"><span class="product-card__tag">Вкус: Изюм</span><span
                                     class="product-card__tag">Вес: 2 кг</span><span class="product-card__tag">Срок: 30
                                     суток</span></div>
-                            <button class="btn btn--outline btn--sm">Запросить цену</button>
+                            <button class="btn btn--outline btn--sm btn--price">Запросить цену</button>
                         </div>
                     </div>
-                    <div class="product-card" data-category="cakes">
+                    <div class="product-card" data-category="cakes" data-name="Кекс Мини Корзина" data-taste="Творожные"
+                        data-weight="2 кг" data-shelf="Нет" data-image="img/card/keks_mini_korzinki_1.webp">
                         <div class="product-card__image">
                             <img src="img/card/keks_mini_korzinki_1.webp" alt="Мини Корзина творожные"
                                 class="product-card__img" loading="lazy">
@@ -494,12 +521,13 @@
                             <div class="product-card__tags"><span class="product-card__tag">Вкус: Творожные</span><span
                                     class="product-card__tag">Вес: 2 кг</span><span class="product-card__tag">Срок:
                                     Нет</span></div>
-                            <button class="btn btn--outline btn--sm">Запросить цену</button>
+                            <button class="btn btn--outline btn--sm btn--price">Запросить цену</button>
                         </div>
                     </div>
 
-                    <!-- Категория: Бисквит -->
-                    <div class="product-card" data-category="biscuits">
+                    <div class="product-card" data-category="biscuits" data-name="Бисквит Чак-Чак"
+                        data-taste="Начинка мандарин" data-weight="2.5 кг" data-shelf="Нет"
+                        data-image="img/card/bis_chak-chak_1.webp">
                         <div class="product-card__image">
                             <img src="img/card/bis_chak-chak_1.webp" alt="Бисквит Чак-Чак с начинкой мандарин"
                                 class="product-card__img" loading="lazy">
@@ -509,10 +537,12 @@
                             <div class="product-card__tags"><span class="product-card__tag">Вкус: Начинка
                                     мандарин</span><span class="product-card__tag">Вес: 2.5 кг</span><span
                                     class="product-card__tag">Срок: Нет</span></div>
-                            <button class="btn btn--outline btn--sm">Запросить цену</button>
+                            <button class="btn btn--outline btn--sm btn--price">Запросить цену</button>
                         </div>
                     </div>
-                    <div class="product-card" data-category="biscuits">
+                    <div class="product-card" data-category="biscuits" data-name="Бисквитная Юла"
+                        data-taste="Начинка малина" data-weight="2.5 кг" data-shelf="30 суток"
+                        data-image="img/card/bis_yla_1.webp">
                         <div class="product-card__image">
                             <img src="img/card/bis_yla_1.webp" alt="Бисквитная Юла с начинкой малина"
                                 class="product-card__img" loading="lazy">
@@ -522,10 +552,12 @@
                             <div class="product-card__tags"><span class="product-card__tag">Вкус: Начинка
                                     малина</span><span class="product-card__tag">Вес: 2.5 кг</span><span
                                     class="product-card__tag">Срок: 30 суток</span></div>
-                            <button class="btn btn--outline btn--sm">Запросить цену</button>
+                            <button class="btn btn--outline btn--sm btn--price">Запросить цену</button>
                         </div>
                     </div>
-                    <div class="product-card" data-category="biscuits">
+                    <div class="product-card" data-category="biscuits" data-name="Бисквитная Юла"
+                        data-taste="Начинка мандариновая" data-weight="2.5 кг" data-shelf="30 суток"
+                        data-image="img/card/bis_yla_1.webp">
                         <div class="product-card__image">
                             <img src="img/card/bis_yla_1.webp" alt="Бисквитная Юла с начинкой мандариновая"
                                 class="product-card__img" loading="lazy">
@@ -535,10 +567,12 @@
                             <div class="product-card__tags"><span class="product-card__tag">Вкус: Начинка
                                     мандариновая</span><span class="product-card__tag">Вес: 2.5 кг</span><span
                                     class="product-card__tag">Срок: 30 суток</span></div>
-                            <button class="btn btn--outline btn--sm">Запросить цену</button>
+                            <button class="btn btn--outline btn--sm btn--price">Запросить цену</button>
                         </div>
                     </div>
-                    <div class="product-card" data-category="biscuits">
+                    <div class="product-card" data-category="biscuits" data-name="Бисквитные Батончики"
+                        data-taste="Творог с черникой" data-weight="3 кг" data-shelf="30 суток"
+                        data-image="img/card/bis_batonchiki_1.webp">
                         <div class="product-card__image">
                             <img src="img/card/bis_batonchiki_1.webp" alt="Бисквитные Батончики с творогом и черникой"
                                 class="product-card__img" loading="lazy">
@@ -548,10 +582,12 @@
                             <div class="product-card__tags"><span class="product-card__tag">Вкус: Творог с
                                     черникой</span><span class="product-card__tag">Вес: 3 кг</span><span
                                     class="product-card__tag">Срок: 30 суток</span></div>
-                            <button class="btn btn--outline btn--sm">Запросить цену</button>
+                            <button class="btn btn--outline btn--sm btn--price">Запросить цену</button>
                         </div>
                     </div>
-                    <div class="product-card" data-category="biscuits">
+                    <div class="product-card" data-category="biscuits" data-name="Бисквитные Таблетки"
+                        data-taste="Вишня" data-weight="2 кг" data-shelf="30 дней"
+                        data-image="img/card/bis_tabletki_1.webp">
                         <div class="product-card__image">
                             <img src="img/card/bis_tabletki_1.webp" alt="Бисквитные Таблетки с вишней"
                                 class="product-card__img" loading="lazy">
@@ -561,10 +597,12 @@
                             <div class="product-card__tags"><span class="product-card__tag">Вкус: Вишня</span><span
                                     class="product-card__tag">Вес: 2 кг</span><span class="product-card__tag">Срок: 30
                                     дней</span></div>
-                            <button class="btn btn--outline btn--sm">Запросить цену</button>
+                            <button class="btn btn--outline btn--sm btn--price">Запросить цену</button>
                         </div>
                     </div>
-                    <div class="product-card" data-category="biscuits">
+                    <div class="product-card" data-category="biscuits" data-name="Бисквитные Таблетки"
+                        data-taste="Лимон" data-weight="2 кг" data-shelf="30 дней"
+                        data-image="img/card/bis_tabletki_1.webp">
                         <div class="product-card__image">
                             <img src="img/card/bis_tabletki_1.webp" alt="Бисквитные Таблетки с лимоном"
                                 class="product-card__img" loading="lazy">
@@ -574,10 +612,12 @@
                             <div class="product-card__tags"><span class="product-card__tag">Вкус: Лимон</span><span
                                     class="product-card__tag">Вес: 2 кг</span><span class="product-card__tag">Срок: 30
                                     дней</span></div>
-                            <button class="btn btn--outline btn--sm">Запросить цену</button>
+                            <button class="btn btn--outline btn--sm btn--price">Запросить цену</button>
                         </div>
                     </div>
-                    <div class="product-card" data-category="biscuits">
+                    <div class="product-card" data-category="biscuits" data-name="Бисквитный Кубик Рубик"
+                        data-taste="Груша" data-weight="2.5 кг" data-shelf="Нет"
+                        data-image="img/card/bis_kubik-rubik_1.webp">
                         <div class="product-card__image">
                             <img src="img/card/bis_kubik-rubik_1.webp" alt="Бисквитный Кубик Рубик с грушей"
                                 class="product-card__img" loading="lazy">
@@ -587,10 +627,12 @@
                             <div class="product-card__tags"><span class="product-card__tag">Вкус: Груша</span><span
                                     class="product-card__tag">Вес: 2.5 кг</span><span class="product-card__tag">Срок:
                                     Нет</span></div>
-                            <button class="btn btn--outline btn--sm">Запросить цену</button>
+                            <button class="btn btn--outline btn--sm btn--price">Запросить цену</button>
                         </div>
                     </div>
-                    <div class="product-card" data-category="biscuits">
+                    <div class="product-card" data-category="biscuits" data-name="Бисквитный Кубик Рубик"
+                        data-taste="Малина" data-weight="2.5 кг" data-shelf="Нет"
+                        data-image="img/card/bis_kubik-rubik_1.webp">
                         <div class="product-card__image">
                             <img src="img/card/bis_kubik-rubik_1.webp" alt="Бисквитный Кубик Рубик с малиной"
                                 class="product-card__img" loading="lazy">
@@ -600,10 +642,11 @@
                             <div class="product-card__tags"><span class="product-card__tag">Вкус: Малина</span><span
                                     class="product-card__tag">Вес: 2.5 кг</span><span class="product-card__tag">Срок:
                                     Нет</span></div>
-                            <button class="btn btn--outline btn--sm">Запросить цену</button>
+                            <button class="btn btn--outline btn--sm btn--price">Запросить цену</button>
                         </div>
                     </div>
-                    <div class="product-card" data-category="biscuits">
+                    <div class="product-card" data-category="biscuits" data-name="Бисквитный Кубик" data-taste="Изюм"
+                        data-weight="2.5 кг" data-shelf="Нет" data-image="img/card/bis_kubik_1.webp">
                         <div class="product-card__image">
                             <img src="img/card/bis_kubik_1.webp" alt="Бисквитный Кубик с изюмом"
                                 class="product-card__img" loading="lazy">
@@ -613,10 +656,12 @@
                             <div class="product-card__tags"><span class="product-card__tag">Вкус: Изюм</span><span
                                     class="product-card__tag">Вес: 2.5 кг</span><span class="product-card__tag">Срок:
                                     Нет</span></div>
-                            <button class="btn btn--outline btn--sm">Запросить цену</button>
+                            <button class="btn btn--outline btn--sm btn--price">Запросить цену</button>
                         </div>
                     </div>
-                    <div class="product-card" data-category="biscuits">
+                    <div class="product-card" data-category="biscuits" data-name="Бисквитный Ломтик"
+                        data-taste="Вишня со сливками" data-weight="2.5 кг" data-shelf="30 суток"
+                        data-image="img/card/bis_lomtik_1.webp">
                         <div class="product-card__image">
                             <img src="img/card/bis_lomtik_1.webp" alt="Бисквитный Ломтик с вишней и сливками"
                                 class="product-card__img" loading="lazy">
@@ -626,10 +671,11 @@
                             <div class="product-card__tags"><span class="product-card__tag">Вкус: Вишня со
                                     сливками</span><span class="product-card__tag">Вес: 2.5 кг</span><span
                                     class="product-card__tag">Срок: 30 суток</span></div>
-                            <button class="btn btn--outline btn--sm">Запросить цену</button>
+                            <button class="btn btn--outline btn--sm btn--price">Запросить цену</button>
                         </div>
                     </div>
-                    <div class="product-card" data-category="biscuits">
+                    <div class="product-card" data-category="biscuits" data-name="Бисквитный Лотус" data-taste="Сливки"
+                        data-weight="2 кг" data-shelf="20 суток" data-image="img/card/bis_lotus_1.webp">
                         <div class="product-card__image">
                             <img src="img/card/bis_lotus_1.webp" alt="Бисквитный Лотус со сливками"
                                 class="product-card__img" loading="lazy">
@@ -639,10 +685,11 @@
                             <div class="product-card__tags"><span class="product-card__tag">Вкус: Сливки</span><span
                                     class="product-card__tag">Вес: 2 кг</span><span class="product-card__tag">Срок: 20
                                     суток</span></div>
-                            <button class="btn btn--outline btn--sm">Запросить цену</button>
+                            <button class="btn btn--outline btn--sm btn--price">Запросить цену</button>
                         </div>
                     </div>
-                    <div class="product-card" data-category="biscuits">
+                    <div class="product-card" data-category="biscuits" data-name="Бисквитный Сочник" data-taste="Безе"
+                        data-weight="1.5 кг" data-shelf="30 дней" data-image="img/card/bis_sochnik_1.webp">
                         <div class="product-card__image">
                             <img src="img/card/bis_sochnik_1.webp" alt="Бисквитный Сочник с безе"
                                 class="product-card__img" loading="lazy">
@@ -652,10 +699,11 @@
                             <div class="product-card__tags"><span class="product-card__tag">Вкус: Безе</span><span
                                     class="product-card__tag">Вес: 1.5 кг</span><span class="product-card__tag">Срок: 30
                                     дней</span></div>
-                            <button class="btn btn--outline btn--sm">Запросить цену</button>
+                            <button class="btn btn--outline btn--sm btn--price">Запросить цену</button>
                         </div>
                     </div>
-                    <div class="product-card" data-category="biscuits">
+                    <div class="product-card" data-category="biscuits" data-name="Бисквитный Сочник" data-taste="Творог"
+                        data-weight="2 кг" data-shelf="20 дней" data-image="img/card/bis_sochnik_1.webp">
                         <div class="product-card__image">
                             <img src="img/card/bis_sochnik_1.webp" alt="Бисквитный Сочник с творогом"
                                 class="product-card__img" loading="lazy">
@@ -665,10 +713,12 @@
                             <div class="product-card__tags"><span class="product-card__tag">Вкус: Творог</span><span
                                     class="product-card__tag">Вес: 2 кг</span><span class="product-card__tag">Срок: 20
                                     дней</span></div>
-                            <button class="btn btn--outline btn--sm">Запросить цену</button>
+                            <button class="btn btn--outline btn--sm btn--price">Запросить цену</button>
                         </div>
                     </div>
-                    <div class="product-card" data-category="biscuits">
+                    <div class="product-card" data-category="biscuits" data-name="Бисквитный Сырок"
+                        data-taste="Карамель" data-weight="2.5 кг" data-shelf="Нет"
+                        data-image="img/card/bis_sirok_1.webp">
                         <div class="product-card__image">
                             <img src="img/card/bis_sirok_1.webp" alt="Бисквитный Сырок с карамелью"
                                 class="product-card__img" loading="lazy">
@@ -678,10 +728,11 @@
                             <div class="product-card__tags"><span class="product-card__tag">Вкус: Карамель</span><span
                                     class="product-card__tag">Вес: 2.5 кг</span><span class="product-card__tag">Срок:
                                     Нет</span></div>
-                            <button class="btn btn--outline btn--sm">Запросить цену</button>
+                            <button class="btn btn--outline btn--sm btn--price">Запросить цену</button>
                         </div>
                     </div>
-                    <div class="product-card" data-category="biscuits">
+                    <div class="product-card" data-category="biscuits" data-name="Бисквитный Сырок" data-taste="Творог"
+                        data-weight="2.5 кг" data-shelf="Нет" data-image="img/card/bis_sirok_1.webp">
                         <div class="product-card__image">
                             <img src="img/card/bis_sirok_1.webp" alt="Бисквитный Сырок с творогом"
                                 class="product-card__img" loading="lazy">
@@ -691,12 +742,13 @@
                             <div class="product-card__tags"><span class="product-card__tag">Вкус: Творог</span><span
                                     class="product-card__tag">Вес: 2.5 кг</span><span class="product-card__tag">Срок:
                                     Нет</span></div>
-                            <button class="btn btn--outline btn--sm">Запросить цену</button>
+                            <button class="btn btn--outline btn--sm btn--price">Запросить цену</button>
                         </div>
                     </div>
 
-                    <!-- Категория: Вафли -->
-                    <div class="product-card" data-category="waffles">
+                    <div class="product-card" data-category="waffles" data-name="Вафли Гребешки"
+                        data-taste="Вишня со сливками" data-weight="2.5 кг" data-shelf="30 суток"
+                        data-image="img/card/vafli_grbeshok_1.webp">
                         <div class="product-card__image">
                             <img src="img/card/vafli_grbeshok_1.webp" alt="Вафли Гребешки с вишней и сливками"
                                 class="product-card__img" loading="lazy">
@@ -706,10 +758,12 @@
                             <div class="product-card__tags"><span class="product-card__tag">Вкус: Вишня со
                                     сливками</span><span class="product-card__tag">Вес: 2.5 кг</span><span
                                     class="product-card__tag">Срок: 30 суток</span></div>
-                            <button class="btn btn--outline btn--sm">Запросить цену</button>
+                            <button class="btn btn--outline btn--sm btn--price">Запросить цену</button>
                         </div>
                     </div>
-                    <div class="product-card" data-category="waffles">
+                    <div class="product-card" data-category="waffles" data-name="Вафли Мороженки"
+                        data-taste="Без начинки" data-weight="2 кг" data-shelf="Нет"
+                        data-image="img/card/vafli_morozhenki_1.webp">
                         <div class="product-card__image">
                             <img src="img/card/vafli_morozhenki_1.webp" alt="Вафли Мороженки без начинки"
                                 class="product-card__img" loading="lazy">
@@ -719,10 +773,12 @@
                             <div class="product-card__tags"><span class="product-card__tag">Вкус: Без
                                     начинки</span><span class="product-card__tag">Вес: 2 кг</span><span
                                     class="product-card__tag">Срок: Нет</span></div>
-                            <button class="btn btn--outline btn--sm">Запросить цену</button>
+                            <button class="btn btn--outline btn--sm btn--price">Запросить цену</button>
                         </div>
                     </div>
-                    <div class="product-card" data-category="waffles">
+                    <div class="product-card" data-category="waffles" data-name="Вафли Сердечки"
+                        data-taste="Без начинки" data-weight="2 кг" data-shelf="30 суток"
+                        data-image="img/card/vafli_serdechki_1.webp">
                         <div class="product-card__image">
                             <img src="img/card/vafli_serdechki_1.webp" alt="Вафли Сердечки без начинки"
                                 class="product-card__img" loading="lazy">
@@ -732,10 +788,11 @@
                             <div class="product-card__tags"><span class="product-card__tag">Вкус: Без
                                     начинки</span><span class="product-card__tag">Вес: 2 кг</span><span
                                     class="product-card__tag">Срок: 30 суток</span></div>
-                            <button class="btn btn--outline btn--sm">Запросить цену</button>
+                            <button class="btn btn--outline btn--sm btn--price">Запросить цену</button>
                         </div>
                     </div>
-                    <div class="product-card" data-category="waffles">
+                    <div class="product-card" data-category="waffles" data-name="Вафли Спинер" data-taste="Без начинки"
+                        data-weight="2.2 кг" data-shelf="40 дней" data-image="img/card/vafli_spiner_1.webp">
                         <div class="product-card__image">
                             <img src="img/card/vafli_spiner_1.webp" alt="Вафли Спинер без начинки"
                                 class="product-card__img" loading="lazy">
@@ -745,10 +802,12 @@
                             <div class="product-card__tags"><span class="product-card__tag">Вкус: Без
                                     начинки</span><span class="product-card__tag">Вес: 2.2 кг</span><span
                                     class="product-card__tag">Срок: 40 дней</span></div>
-                            <button class="btn btn--outline btn--sm">Запросить цену</button>
+                            <button class="btn btn--outline btn--sm btn--price">Запросить цену</button>
                         </div>
                     </div>
-                    <div class="product-card" data-category="waffles">
+                    <div class="product-card" data-category="waffles" data-name="Вафли Спинер"
+                        data-taste="Вишня со сливками" data-weight="2 кг" data-shelf="25 суток"
+                        data-image="img/card/vafli_spiner_2.webp">
                         <div class="product-card__image">
                             <img src="img/card/vafli_spiner_2.webp" alt="Вафли Спинер с вишней и сливками"
                                 class="product-card__img" loading="lazy">
@@ -758,12 +817,13 @@
                             <div class="product-card__tags"><span class="product-card__tag">Вкус: Вишня со
                                     сливками</span><span class="product-card__tag">Вес: 2 кг</span><span
                                     class="product-card__tag">Срок: 25 суток</span></div>
-                            <button class="btn btn--outline btn--sm">Запросить цену</button>
+                            <button class="btn btn--outline btn--sm btn--price">Запросить цену</button>
                         </div>
                     </div>
 
-                    <!-- Категория: Пирожные -->
-                    <div class="product-card" data-category="pastries">
+                    <div class="product-card" data-category="pastries" data-name="Пирожное Колобок"
+                        data-taste="Безе с вишней" data-weight="2 кг" data-shelf="Нет"
+                        data-image="img/card/pir_kolobok_1.webp">
                         <div class="product-card__image">
                             <img src="img/card/pir_kolobok_1.webp" alt="Пирожное Колобок с безе и вишней"
                                 class="product-card__img" loading="lazy">
@@ -773,10 +833,11 @@
                             <div class="product-card__tags"><span class="product-card__tag">Вкус: Безе с
                                     вишней</span><span class="product-card__tag">Вес: 2 кг</span><span
                                     class="product-card__tag">Срок: Нет</span></div>
-                            <button class="btn btn--outline btn--sm">Запросить цену</button>
+                            <button class="btn btn--outline btn--sm btn--price">Запросить цену</button>
                         </div>
                     </div>
-                    <div class="product-card" data-category="pastries">
+                    <div class="product-card" data-category="pastries" data-name="Пирожное Конверт" data-taste="Сливки"
+                        data-weight="2 кг" data-shelf="30 суток" data-image="img/card/pir_konvert_1.webp">
                         <div class="product-card__image">
                             <img src="img/card/pir_konvert_1.webp" alt="Пирожное Конверт со сливками"
                                 class="product-card__img" loading="lazy">
@@ -786,10 +847,12 @@
                             <div class="product-card__tags"><span class="product-card__tag">Вкус: Сливки</span><span
                                     class="product-card__tag">Вес: 2 кг</span><span class="product-card__tag">Срок: 30
                                     суток</span></div>
-                            <button class="btn btn--outline btn--sm">Запросить цену</button>
+                            <button class="btn btn--outline btn--sm btn--price">Запросить цену</button>
                         </div>
                     </div>
-                    <div class="product-card" data-category="pastries">
+                    <div class="product-card" data-category="pastries" data-name="Пирожное Кубик"
+                        data-taste="Вишня со сливками" data-weight="2.5 кг" data-shelf="20 суток"
+                        data-image="img/card/pir_kubik_1.webp">
                         <div class="product-card__image">
                             <img src="img/card/pir_kubik_1.webp" alt="Пирожное Кубик с вишней и сливками"
                                 class="product-card__img" loading="lazy">
@@ -799,10 +862,11 @@
                             <div class="product-card__tags"><span class="product-card__tag">Вкус: Вишня со
                                     сливками</span><span class="product-card__tag">Вес: 2.5 кг</span><span
                                     class="product-card__tag">Срок: 20 суток</span></div>
-                            <button class="btn btn--outline btn--sm">Запросить цену</button>
+                            <button class="btn btn--outline btn--sm btn--price">Запросить цену</button>
                         </div>
                     </div>
-                    <div class="product-card" data-category="pastries">
+                    <div class="product-card" data-category="pastries" data-name="Пирожное Кубик" data-taste="Творог"
+                        data-weight="3 кг" data-shelf="15 суток" data-image="img/card/pir_kubik_1.webp">
                         <div class="product-card__image">
                             <img src="img/card/pir_kubik_1.webp" alt="Пирожное Кубик с творогом"
                                 class="product-card__img" loading="lazy">
@@ -812,10 +876,11 @@
                             <div class="product-card__tags"><span class="product-card__tag">Вкус: Творог</span><span
                                     class="product-card__tag">Вес: 3 кг</span><span class="product-card__tag">Срок: 15
                                     суток</span></div>
-                            <button class="btn btn--outline btn--sm">Запросить цену</button>
+                            <button class="btn btn--outline btn--sm btn--price">Запросить цену</button>
                         </div>
                     </div>
-                    <div class="product-card" data-category="pastries">
+                    <div class="product-card" data-category="pastries" data-name="Пирожное Кубик" data-taste="Черника"
+                        data-weight="2.5 кг" data-shelf="20 суток" data-image="img/card/pir_kubik_1.webp">
                         <div class="product-card__image">
                             <img src="img/card/pir_kubik_1.webp" alt="Пирожное Кубик с черникой"
                                 class="product-card__img" loading="lazy">
@@ -825,7 +890,7 @@
                             <div class="product-card__tags"><span class="product-card__tag">Вкус: Черника</span><span
                                     class="product-card__tag">Вес: 2.5 кг</span><span class="product-card__tag">Срок: 20
                                     суток</span></div>
-                            <button class="btn btn--outline btn--sm">Запросить цену</button>
+                            <button class="btn btn--outline btn--sm btn--price">Запросить цену</button>
                         </div>
                     </div>
                 </div>
@@ -915,16 +980,6 @@
                             </a>
                         </div>
                     </div>
-                    <div class="contacts__map">
-                        <div class="contacts__map-placeholder">
-                            <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#E67E22"
-                                stroke-width="1.5">
-                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" />
-                                <circle cx="12" cy="9" r="2.5" />
-                            </svg>
-                            <span>Москва и Московская область</span>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
@@ -990,6 +1045,80 @@
                 заказа по Москве и Московской области.</p>
         </div>
     </footer>
+
+    <div class="modal-overlay" id="priceModal">
+        <div class="modal">
+            <button class="modal__close" id="closePriceModal">&times;</button>
+            <h3 class="modal__title">Запросить цену</h3>
+            <p class="modal__subtitle">Выберите удобный способ связи, и мы ответим в ближайшее время.</p>
+            <div class="modal__actions">
+                <a href="https://wa.me/qr/VAN4I6BXM7R7J1" class="modal__action-btn modal__action-btn--whatsapp"
+                    target="_blank" rel="noopener noreferrer">
+                    <span class="modal__action-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="white">
+                            <path
+                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                        </svg>
+                    </span>
+                    Написать в WhatsApp
+                </a>
+                <a href="https://t.me/Best_sweets1" class="modal__action-btn modal__action-btn--telegram"
+                    target="_blank" rel="noopener noreferrer">
+                    <span class="modal__action-icon">
+                        <svg width="42" height="42" viewBox="0 0 24 24" fill="none">
+                            <circle cx="12" cy="12" r="11" fill="white" opacity="0.2" />
+                            <path
+                                d="M5.9 11.7l3.7 1.2 1.3 4.1c.1.3.5.4.7.2l2-1.7 2.9 2.2c.3.2.7.1.8-.3l2.5-11.5c.1-.4-.2-.7-.6-.6L5.4 10.3c-.4.1-.5.5-.3.8l.8.6z"
+                                fill="white" />
+                        </svg>
+                    </span>
+                    Написать в Telegram
+                </a>
+                <a href="https://max.ru/u/f9LHodD0cOLDgRPGBDt8la_poNAEVxLvoEeyM4jIfHVMrdO0iJCkSIiYdWI"
+                    class="modal__action-btn modal__action-btn--max" target="_blank" rel="noopener noreferrer">
+                    <span class="modal__action-icon">
+                        <img src="img/max.webp" alt="MAX" width="42" height="42" style="object-fit:contain;">
+                    </span>
+                    Написать в MAX
+                </a>
+                <a href="tel:89772913626" class="modal__action-btn modal__action-btn--phone">
+                    <span class="modal__action-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                            <path
+                                d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.36 11.36 0 003.58.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.58 1 1 0 01-.25 1.01l-2.2 2.2z"
+                                fill="white" />
+                        </svg>
+                    </span>
+                    Позвонить: 8 (977) 291-36-26
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="productModal">
+        <div class="modal">
+            <button class="modal__close" id="closeProductModal">&times;</button>
+            <div class="modal__product-image" id="modalProductImage">
+                <img src="" alt="" id="modalProductImg">
+            </div>
+            <div class="modal__product-info">
+                <h3 class="modal__product-name" id="modalProductName"></h3>
+                <div class="modal__product-tags">
+                    <span class="modal__product-tag" id="modalProductTaste"></span>
+                    <span class="modal__product-tag" id="modalProductWeight"></span>
+                    <span class="modal__product-tag" id="modalProductShelf"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a href="tel:89772913626" class="phone-fab" aria-label="Позвонить">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
+            <path
+                d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.36 11.36 0 003.58.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.58 1 1 0 01-.25 1.01l-2.2 2.2z"
+                fill="white" />
+        </svg>
+    </a>
 
     <script src="js/script.js"></script>
 </body>
