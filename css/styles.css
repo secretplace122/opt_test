@@ -267,7 +267,7 @@ h3,
     z-index: 0;
 }
 
-.hero > * {
+.hero>* {
     position: relative;
     z-index: 1;
 }
@@ -1484,5 +1484,13 @@ h3,
 
     .modal__product-image--full img {
         max-height: 80vh;
+    }
+}
+
+@media (min-width: 601px) {
+    .hero::before {
+        background-image: url('../img/hero-bg_desktop.webp');
+        background-size: cover;
+        background-position: center center;
     }
 }
