@@ -369,13 +369,6 @@ h3,
     color: var(--text-muted);
 }
 
-.hero__visual {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
-}
 
 .hero__image-placeholder {
     width: 100%;
@@ -398,14 +391,6 @@ h3,
     border-radius: 50%;
 }
 
-.hero__visual-text {
-    font-family: 'Oswald', sans-serif;
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: 0.12em;
-    color: var(--orange-dark);
-    text-align: center;
-}
 
 .about {
     padding: 20px 0;
@@ -986,14 +971,6 @@ h3,
     display: block;
 }
 
-.hero__visual {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
-}
-
 .hero__logo-wrapper {
     width: 100%;
     max-width: 360px;
@@ -1010,15 +987,6 @@ h3,
     display: block;
     border-radius: 50%;
     box-shadow: 0 8px 32px rgba(245, 124, 0, 0.15);
-}
-
-.hero__visual-text {
-    font-family: 'Oswald', sans-serif;
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: 0.12em;
-    color: var(--orange-dark);
-    text-align: center;
 }
 
 @keyframes shimmerSweep {
@@ -1280,10 +1248,6 @@ h3,
 @media (max-width: 1024px) {
     .hero .container {
         grid-template-columns: 1fr;
-    }
-
-    .hero__visual {
-        display: none;
     }
 
     .about__grid {
