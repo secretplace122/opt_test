@@ -50,7 +50,7 @@ body {
 .container {
     max-width: 1260px;
     margin: 0 auto;
-    padding: 0 10px;
+    padding: 0 5px;
 }
 
 h1,
@@ -1261,7 +1261,7 @@ h3,
     right: -3px;
     bottom: -3px;
     border-radius: inherit;
-    background: linear-gradient(45deg, var(--orange), var(--orange-light), var(--orange), var(--orange-light), var(--orange));
+    background: linear-gradient(77deg, var(--orange), var(--blue-light), var(--blue-dark), var(--blue-light), var(--blue-light));
     background-size: 400% 400%;
     animation: orangeBorder 2s linear infinite;
     z-index: 0;
@@ -1444,7 +1444,7 @@ h3,
 
     .catalog__grid {
         grid-template-columns: repeat(3, 1fr);
-        gap: 8px;
+        gap: 8px 3px;
     }
 
     .product-card__info {
