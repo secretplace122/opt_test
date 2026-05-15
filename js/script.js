@@ -66,10 +66,17 @@ document.addEventListener('DOMContentLoaded', function() {
             var filterValue = btn.dataset.filter;
 
             productCards.forEach(function(card) {
-                if (filterValue === 'all' || card.dataset.category === filterValue) {
+                card.style.display = 'none';
+                if (filterValue === 'all') {
                     card.style.display = 'flex';
+                } else if (filterValue === 'best') {
+                    if (card.getAttribute('data-best') === 'true') {
+                        card.style.display = 'flex';
+                    }
                 } else {
-                    card.style.display = 'none';
+                    if (card.getAttribute('data-category') === filterValue) {
+                        card.style.display = 'flex';
+                    }
                 }
             });
         });
