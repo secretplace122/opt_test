@@ -1286,7 +1286,7 @@ h3,
 .product-card__best-badge {
     position: absolute;
     top: -8px;
-    right: -8px;
+    right: -4px;
     z-index: 10;
     background: var(--orange);
     color: var(--blue-dark);
